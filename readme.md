@@ -37,7 +37,7 @@ server:
 
 spring:
   application:
-    name: config-server
+    name: ms-configserver
   cloud:
     config:
       server:
