@@ -8,7 +8,7 @@ For this assignement we will implement reactive programing as means to improve o
 ```
 spring:
   application:
-    name: ms-configserver
+    name: ${MICROSERVICE_NAME:ms-name}
   cloud:
     config:
       server:
