@@ -1,0 +1,14 @@
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+  server:
+    renewal-percent-threshold: 0.5
+    expected-client-renewal-interval-seconds: 30
+#  server:
+#    wait-time-in-ms-when-sync-empty: 3000
+
+server:
+  port: 8761
