@@ -5,6 +5,17 @@ For this assignement we will implement reactive programing as means to improve o
 `Maven:Java:Spring 2.7.2:Jar:Java 17`
 
 ### For any proyect:
+```
+spring:
+  application:
+    name: ms-configserver
+  cloud:
+    config:
+      server:
+        git:
+          uri: ${GIT_CONFIG_URI:https://github.com/TMaldonado460/config-repository}
+          default-label: ${GIT_DEFAULT_BRANCH:main}
+```
 #### Required dependencies (Spring initializr):
 * Spring Boot DevTools
 * Lombok
