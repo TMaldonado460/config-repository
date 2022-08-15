@@ -11,10 +11,7 @@ spring:
     name: ${MICROSERVICE_NAME:ms-name}
   cloud:
     config:
-      server:
-        git:
-          uri: ${GIT_CONFIG_URI:https://github.com/TMaldonado460/config-repository}
-          default-label: ${GIT_DEFAULT_BRANCH:main}
+      import: configserver:${CONFIG_SERVER_URL:http://localhost:8888}
 ```
 #### Required dependencies (Spring initializr):
 * Spring Boot DevTools
