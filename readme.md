@@ -9,9 +9,8 @@ For this assignement we will implement reactive programing as means to improve o
 spring:
   application:
     name: ${MICROSERVICE_NAME:ms-name}
-  cloud:
-    config:
-      import: configserver:${CONFIG_SERVER_URL:http://localhost:8888}
+  config:
+    import: optional:configserver:${CONFIG_SERVER_URL:http://localhost:8888}
 ```
 #### Required dependencies (Spring initializr):
 * Spring Boot DevTools
