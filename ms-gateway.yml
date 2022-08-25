@@ -6,11 +6,15 @@ server:
         - id: route-catalog
           uri: lb://catalog-service
           predicates:
-            Path: /catalog/**
+          - Path: /catalog/**
+          filters:
+          - LogingFilter
         - id: route-movie
           uri: http://catalog-service
           predicates:
-            Path: /movies/**
+          - Path: /movies/**
+          filters:
+          - LogingFilter
 
 # eureka config
 eureka:
