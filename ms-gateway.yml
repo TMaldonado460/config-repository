@@ -1,0 +1,22 @@
+server:
+  port: 8080
+  cloud:
+    gateway:
+      routes:
+        - id: route-catalog
+          uri: lb://catalog-service
+          predicates:
+            Path: /catalog/**
+        - id: route-movie
+          uri: http://catalog-service
+          predicates:
+            Path: /movies/**
+
+# eureka config
+eureka:
+  instance:
+    hostname: localhost
+    instance-id: ${spring.application.name}:${spring.application.instance-id:${random.value}}
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
