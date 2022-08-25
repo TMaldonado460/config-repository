@@ -8,13 +8,13 @@ server:
           predicates:
           - Path: /catalog/**
           filters:
-          - LogingFilter
+          - LoggingFilter
         - id: route-movie
           uri: http://catalog-service
           predicates:
           - Path: /movies/**
           filters:
-          - LogingFilter
+          - LoggingFilter
 
 # eureka config
 eureka:
