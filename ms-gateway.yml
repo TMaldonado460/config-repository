@@ -4,13 +4,13 @@ server:
     gateway:
       routes:
         - id: route-catalog
-          uri: lb://CATALOG-SERVICE
+          uri: lb://CATALOG-SERVICE/
           predicates:
           - Path=/catalog/**
           filters:
           - LoggingFilter
         - id: route-movie
-          uri: lb://MOVIE-SERVICE
+          uri: lb://MOVIE-SERVICE/
           predicates:
           - Path=/movies/**
           filters:
