@@ -4,7 +4,7 @@ server:
 spring:
   data:
     mongodb:
-      database: dh2
+      database: dh1
       port: 27017
 
 queue:
