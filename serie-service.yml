@@ -1,0 +1,31 @@
+server:
+  port: 0
+
+
+spring:
+  data:
+    mongodb:
+      database: dh2
+      port: 27017
+
+queue:
+  series:
+    name: serieQueue
+
+message: hello from movie-service
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+        
+        
+# eureka config
+eureka:
+  instance:
+    hostname: localhost
+    instance-id: ${spring.application.name}:${spring.application.instance-id:${random.value}}
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
