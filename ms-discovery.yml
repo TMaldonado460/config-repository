@@ -16,8 +16,8 @@ spring:
   rabbitmq:
     addresses: localhost:5672
     virtual-host: app_vhost
-    username: guess
-    password: guess
+    username: guest
+    password: guest
   zipkin:
     baseUrl: http://localhost:9411/
     enabled: true
