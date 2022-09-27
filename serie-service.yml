@@ -13,10 +13,6 @@ spring:
       database: dh2
       port: 27017
 
-queue:
-  series:
-    name: serieQueue
-
 message: hello from movie-service
 
 management:
