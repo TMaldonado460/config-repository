@@ -1,6 +1,11 @@
 server:
   port: 0
 
+queue:
+  series:
+    name: serieQueue
+  movies:
+    name: movieQueue
 
 spring:
   data:
