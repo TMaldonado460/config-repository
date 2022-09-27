@@ -13,7 +13,6 @@ spring:
       probability: 1.0
   rabbitmq:
     addresses: localhost:5672
-    virtual-host: app_vhost
     username: guest
     password: guest
   zipkin:
