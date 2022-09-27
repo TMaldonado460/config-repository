@@ -9,6 +9,20 @@ eureka:
     expected-client-renewal-interval-seconds: 30
 #  server:
 #    wait-time-in-ms-when-sync-empty: 3000
+spring:
+  sleuth:
+    sampler:
+      probability: 1.0
+  rabbitmq:
+    addresses: localhost:5672
+    virtual-host: app_vhost
+    username: guess
+    password: guess
+  zipkin:
+    baseUrl: http://localhost:9411/
+    enabled: true
+    sender:
+      type: rabbit
 
 server:
   port: 8761
